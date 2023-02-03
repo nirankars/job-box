@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(0);
   return (
     <>
-      <div className="container mx-auto mt-8">
+      <div className="container mx-auto mt-8 pb-8">
         <div className="flex ">
           <div className="flex-auto text-start text-3xl font-bold">
             <h1>JobBox</h1>
@@ -27,7 +28,7 @@ export default function Navbar() {
                   <p>Home5</p>
                 </div>
               </p>
-              <p
+              <Link to="/FindJob"
                 onClick={() => {
                   setShowMenu(2);
                 }}
@@ -42,7 +43,7 @@ export default function Navbar() {
                   <p>Find a job 4</p>
                   <p>Find a job 5</p>
                 </div>
-              </p>
+              </Link>
               <p
                 onClick={() => {
                   setShowMenu(3);
@@ -93,7 +94,8 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex-auto text-end">
-            <button  className="bg-blue-600 px-4 py-2 rounded-xl text-white text-2xl">Sign in</button>
+          <Link to="/Login" className="underline underline-offset-2 mr-8">Register</Link>
+            <Link to="/Signin"  className="bg-blue-600 px-4 py-2 rounded-xl text-white text-2xl">Sign in</Link>
           </div>
         </div>
       </div>

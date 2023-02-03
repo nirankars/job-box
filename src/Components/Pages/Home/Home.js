@@ -1,4 +1,6 @@
 import React from "react";
+
+import Login from "../Login/Login"
 import CategoryBrowser from "./Components/Category-Browser";
 import Hero from "./Components/Hero";
 import JobLocations from "./Components/Job-Locations";
@@ -17,6 +19,8 @@ export default function Home() {
       <TopRecruiiters />
       <JobLocations />
       <News />
+      <Login/>
+    
     </>
   );
 }
